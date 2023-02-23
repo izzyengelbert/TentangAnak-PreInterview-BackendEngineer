@@ -1,9 +1,9 @@
 # Tentang Anak Pre Interview Backend Engineer
 This project is created for Tentang Anak Pre Interview for Backend Engineer
 Tech stack used:
--- Node js
--- Express
--- PostgreSQL
+- Node js
+- Express
+- PostgreSQL
 To run docker postgreSQL: 
 ```
 cd postgres-docker-compose
@@ -133,24 +133,27 @@ npm run start:dev
 
 # Pre defined data
 ## Roles and Permissions
+
 These are predefined roles in the seed:
--- Admin
--- User
+- Admin
+- User
+
 These are predefined permissions in the seed:
--- create_monster
--- read_monster
--- update_monster
--- delete_monster
--- catch_monster
--- read_user
--- update_user
--- delete_user
+- create_monster
+- read_monster
+- update_monster
+- delete_monster
+- catch_monster
+- read_user
+- update_user
+- delete_user
+
 Admin role will have all permissions
 User role will have these permissions:
--- catch_monster
--- read_user
--- update_user
--- delete_user
+- catch_monster
+- read_user
+- update_user
+- delete_user
 
 ## Policy Access Controls
 | HTTP method | route | enabled | permissions required
