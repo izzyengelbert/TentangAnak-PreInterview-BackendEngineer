@@ -24,6 +24,20 @@ To run all seed
 npx sequelize-cli db:seed:all
 ```
 
+before starting, please run:
+```
+npm install
+```
+
+also, please copy ``.env-example`` and rename it to ``.env``
+lastly, please create private.pem and public.pem for private and public keys and then change the path inside ``.env`` file
+(you can use openssl)
+openssl example:
+```
+openssl genrsa -out private.pem
+openssl rsa -in private.pem -pubout > public.pem
+```
+
 to run in dev
 ```
 npm run start:dev
