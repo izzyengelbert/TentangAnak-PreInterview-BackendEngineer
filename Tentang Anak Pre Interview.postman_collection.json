@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "d564dddf-737d-4881-a828-b35be218a6d0",
+		"name": "Tentang Anak Pre Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4298881"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Monster",
+			"item": [
+				{
+					"name": "List Monsters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/monsters/?catched=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"monsters",
+								""
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "id",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "ASC",
+									"disabled": true
+								},
+								{
+									"key": "types",
+									"value": "electric,flying",
+									"disabled": true
+								},
+								{
+									"key": "catched",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Monsters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/monsters/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"monsters",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Monster",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/izzyengelbert/Documents/projects/tentang-anak-pre-interview/resources/images/char-pikachu.png"
+								},
+								{
+									"key": "name",
+									"value": "Gorgon",
+									"type": "text"
+								},
+								{
+									"key": "class",
+									"value": "Psychic Monster",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A mischievous Pokémon that enjoys playing tricks on its enemies. It can fly and become invisible at will.",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "1.5",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "hp",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "attack",
+									"value": "65",
+									"type": "text"
+								},
+								{
+									"key": "defense",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "speed",
+									"value": "110",
+									"type": "text"
+								},
+								{
+									"key": "types",
+									"value": "electric,flying",
+									"description": "format type name separated by ,\neg: electric,flying",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/monsters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"monsters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Monster",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/izzyengelbert/Documents/projects/tentang-anak-pre-interview/resources/images/snorlax.jpg",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Snorlax",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "class",
+									"value": "Grass Monster",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "A mischievous Pokémon that enjoys playing tricks on its enemies. It can fly and become invisible at will.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "1.5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "weight",
+									"value": "40",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "hp",
+									"value": "60",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "attack",
+									"value": "65",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "defense",
+									"value": "60",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "speed",
+									"value": "110",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "types",
+									"value": "electric,grass",
+									"description": "format type name separated by ,\neg: electric,flying",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/monsters/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"monsters",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Catch Monster",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/monsters/3/catch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"monsters",
+								"3",
+								"catch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Monster",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/izzyengelbert/Documents/projects/tentang-anak-pre-interview/resources/images/eevee.png"
+								},
+								{
+									"key": "name",
+									"value": "Gengar",
+									"type": "text"
+								},
+								{
+									"key": "class",
+									"value": "Psychic Monster",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A mischievous Pokémon that enjoys playing tricks on its enemies. It can fly and become invisible at will.",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "1.5",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "hp",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "attack",
+									"value": "65",
+									"type": "text"
+								},
+								{
+									"key": "defense",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "speed",
+									"value": "110",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/monsters/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"monsters",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMSIsInJvbGVJZCI6IjMiLCJ1c2VybmFtZSI6ImFkbWluIiwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjNUMDg6MzI6NDAuODgzWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAyLTIzVDA4OjMyOjQwLjg4M1oiLCJyb2xlIjp7ImlkIjoiMyIsIm5hbWUiOiJBZG1pbiIsImRlc2NyaXB0aW9uIjpudWxsLCJjcmVhdGVkX2F0IjoiMjAyMy0wMi0yM1QwODozMjo0MC43NTlaIiwidXBkYXRlZF9hdCI6IjIwMjMtMDItMjNUMDg6MzI6NDAuNzU5WiJ9fSwiaWF0IjoxNjc3MTQxMTg5LCJleHAiOjE2NzcxNDQ3ODl9.foCaR8Mz59LVLegwn0Y71iYC0KBjc4SXA_OI0qoc4_NtiVVRIw05cCjiRqDIIst7fr4x3kWtC3J3nQc7ZftofncE6Wd7XtA-iE8336d1UXiIU5oAmAS8oCyAHwToroCE84GTRKhrqEMAkRAj_nTj7anExSCpCPVQ-aoZBBy_qK5ic143sanM3bGXFsqY8euoqrpbLBDCCeF0a1OZrDPlvyQjVVCC518okeiunNRmSiquffPaJMM-vmSaTILtdh57sOP5OeIP7DD4fIUBLpuBoptMRNAYLsJSNWyM3g28qqAUZepim7eKaNYdRiTvzmR1LuZUZ4J-dAfkdIMiyDpKUw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Get File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/files/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"files",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/files",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlSWQiOiIyIiwidXNlcm5hbWUiOiJ1c2VyIiwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjNUMDc6MjM6MjMuOTA3WiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAyLTIzVDA3OjIzOjIzLjkwN1oiLCJyb2xlIjp7ImlkIjoiMiIsIm5hbWUiOiJVc2VyIiwiZGVzY3JpcHRpb24iOm51bGwsImNyZWF0ZWRfYXQiOiIyMDIzLTAyLTIzVDA3OjIzOjIzLjc3OFoiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMi0yM1QwNzoyMzoyMy43NzhaIn19LCJpYXQiOjE2NzcxMzcwMTQsImV4cCI6MTY3NzE0MDYxNH0.YA4GRM5RPIrUeaBxo6tzomF04bMcPR8thhWw6Ajhxg5_N73Pl92JYM4pWam7qlDjvrXLZfdHLAC7emshGhng4Sa_7g6Euicc7ORfSHmMWwa8mCBq1mBd7XKLwggJ7MGUkAb8wsdRXjfYdS2ESbSNU7z9GXOmvkZv3iH987yeBI4jXUiQjzvNVnSAgWDvBqz0IdkWR22zDXZVdmN4LnvTnYfqjQxKqvfQLhvJ7OweeLOQsU6l2rEWf80LG-G_ITnBZ3BJl1oDFQdyl24QCvndfUZotAL7eyLtC8HBcv4UwSm6GL9UZjwEbT1Y3VcVzHghxTiM9yQprSEK5KZYf6yTcg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlSWQiOiIyIiwidXNlcm5hbWUiOiJ1c2VyIiwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjNUMDc6MjM6MjMuOTA3WiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAyLTIzVDA3OjIzOjIzLjkwN1oiLCJyb2xlIjp7ImlkIjoiMiIsIm5hbWUiOiJVc2VyIiwiZGVzY3JpcHRpb24iOm51bGwsImNyZWF0ZWRfYXQiOiIyMDIzLTAyLTIzVDA3OjIzOjIzLjc3OFoiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMi0yM1QwNzoyMzoyMy43NzhaIn19LCJpYXQiOjE2NzcxMzcwMTQsImV4cCI6MTY3NzE0MDYxNH0.YA4GRM5RPIrUeaBxo6tzomF04bMcPR8thhWw6Ajhxg5_N73Pl92JYM4pWam7qlDjvrXLZfdHLAC7emshGhng4Sa_7g6Euicc7ORfSHmMWwa8mCBq1mBd7XKLwggJ7MGUkAb8wsdRXjfYdS2ESbSNU7z9GXOmvkZv3iH987yeBI4jXUiQjzvNVnSAgWDvBqz0IdkWR22zDXZVdmN4LnvTnYfqjQxKqvfQLhvJ7OweeLOQsU6l2rEWf80LG-G_ITnBZ3BJl1oDFQdyl24QCvndfUZotAL7eyLtC8HBcv4UwSm6GL9UZjwEbT1Y3VcVzHghxTiM9yQprSEK5KZYf6yTcg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
